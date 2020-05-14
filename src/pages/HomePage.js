@@ -1,6 +1,15 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+import acquisition from "../assets/SVG/acquisition.svg";
+import incident from "../assets/SVG/tools-and-utensils.svg";
+import task from "../assets/SVG/clipboard.svg";
+import request from "../assets/SVG/question.svg";
+import approval from "../assets/SVG/approval.svg";
+import article from "../assets/SVG/article.svg";
+
+
+
 export default function HomePage() {
 
     return (
@@ -8,28 +17,27 @@ export default function HomePage() {
             <h1 className="heading-primary">
                 Welcome to self-service portal
             </h1>
-            <div className="info-box">
-                <p className="paragraph">
-                    To navigate through you can use menu below
-                </p>
-            </div>
+            
             <div className="row row--flex">
                 <div className="col">
                     <div className="menu-box">
                         <ul className="menu-box__list">
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="">
-                                    My Incidents
+                                    <img src={incident} className="menu-box__icon"/>
+                                    <div>My Incidents</div>
                                 </Link>
                             </li>
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="">
-                                    My Assets
+                                    <img src={task} className="menu-box__icon"/>
+                                    <div>My Tasks</div>
                                 </Link>
                             </li>
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="">
-                                    My Requests
+                                    <img src={request} className="menu-box__icon"/>
+                                    <div>My Request</div>
                                 </Link>
                             </li>
                         </ul>
@@ -40,17 +48,20 @@ export default function HomePage() {
                         <ul className="menu-box__list">
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="">
-                                    My Tasks
+                                    <img src={acquisition} className="menu-box__icon"/>
+                                    <div>My Assets</div>
                                 </Link>
                             </li>
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="">
-                                    My Approvals
+                                    <img src={approval} className="menu-box__icon"/>
+                                    <div>My Approvals</div>
                                 </Link>
                             </li>
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="">
-                                    My Knoledge Articles
+                                    <img src={article} className="menu-box__icon"/>
+                                    <div>My Knoledge Articles</div>
                                 </Link>
                             </li>
                         </ul>
@@ -60,3 +71,11 @@ export default function HomePage() {
         </div>
     );
 }
+
+/*
+<div className="info-box">
+                <p className="paragraph">
+                    To navigate through you can use menu below
+                </p>
+            </div>
+*/

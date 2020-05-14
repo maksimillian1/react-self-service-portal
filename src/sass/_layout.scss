@@ -1,5 +1,5 @@
 .container {
-    max-width: 120rem;
+    max-width: 140rem;
     margin: 8rem auto;
     background-color: $color-grey-light-1;
     box-shadow: $shadow-dark;
@@ -32,7 +32,7 @@
 
 .content {
     display: block;
-
+    padding: 7rem 4rem;
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
     }
@@ -43,8 +43,7 @@
     margin:  0 auto;
     padding: 5rem;
     width: 90%;
-    margin-top: 2rem;
-    
+    height: 60%;
 
     &--flex {
         display: flex;
@@ -106,5 +105,44 @@
         width: 10rem;
         height: 6rem;
         margin-bottom: 1rem;
+    }
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $color-black;
+    height: 11rem;
+    padding: 2rem 0;
+    display: flex;
+
+    &__navigation {
+        align-self: center;
+        justify-items: center;
+        width: 100%;
+        display: flex;
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+        width: calc(100% / 3);
+        text-align: center;
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        background: linear-gradient(to right bottom, #FF3366, #BA265D);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }

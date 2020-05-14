@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import { hot } from "react-hot-loader/root";
 import iconBookmark from '../assets/SVG/bookmark.svg';
 import iconChat from '../assets/SVG/chat.svg';
-import logoUser from "../assets/user.jpg";
 import logoMagnGlass from "../assets/SVG/magnifying-glass.svg";
 
 function Navigation({user}) {

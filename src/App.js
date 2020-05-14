@@ -9,6 +9,7 @@ import IncidentsPage from './pages/IncidentsPage'
 import IncidentPage from "./pages/IncidentPage";
 import HomePage from './pages/HomePage';
 import RequestsPage from './pages/RequestsPage';
+import Footer from './components/Footer';
 
 import './App.css'
 
@@ -27,22 +28,22 @@ function App() {
   return (
     <>
       <Navigation user={result} />
-        <div className="content">
-          <Switch>
-            <Route path="/x_elsr_react_app_index-html.do" exact>
-              <HomePage />
-            </Route>
-            <Route path="/x_elsr_react_app_index-html.do/incidents" exact>
-              <IncidentsPage />
-            </Route>
-            <Route path="/x_elsr_react_app_index-html.do/incident/:id" render={(props) => <IncidentPage {...props}/>} exact/>
-            <Route path="/x_elsr_react_app_index-html.do/requests">
-              <RequestsPage />
-            </Route>
-            <Redirect to="/x_elsr_react_app_index-html.do" />
-          </Switch>
-        </div>
-        
+      <div className="content">
+        <Switch>
+          <Route path="/x_elsr_react_app_index-html.do" exact>
+            <HomePage />
+          </Route>
+          <Route path="/x_elsr_react_app_index-html.do/incidents" exact>
+            <IncidentsPage />
+          </Route>
+          <Route path="/x_elsr_react_app_index-html.do/incident/:id" render={(props) => <IncidentPage {...props}/>} exact/>
+          <Route path="/x_elsr_react_app_index-html.do/requests">
+            <RequestsPage />
+          </Route>
+          <Redirect to="/x_elsr_react_app_index-html.do" />
+        </Switch>
+      </div>
+      <Footer /> 
     </>
   );
 }
