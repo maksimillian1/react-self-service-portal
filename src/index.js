@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from 'axios';
+import { HashRouter } from 'react-router-dom';
+import "@blueprintjs/core/lib/css/blueprint.css";
+import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+
 import App from "./App";
 
 // define ServiceNow authentication schema for REST calls
@@ -20,4 +24,8 @@ if (process.env.NODE_ENV === 'development') {
   }
   axios.defaults.headers.put['Content-Type'] = 'application/json';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <HashRouter>
+    <App />
+  </HashRouter>, 
+  document.getElementById("root"));
