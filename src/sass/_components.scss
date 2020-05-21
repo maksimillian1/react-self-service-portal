@@ -164,13 +164,15 @@
     height: 100%;
     padding: 0;
     margin: 0;
+    width: fit-content;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
     column-gap: 2rem;
     row-gap: 2rem;
+    margin-left: 3rem;
 }
 
 // Loading
@@ -249,8 +251,22 @@
     min-width: 4rem;
     min-height: 4rem;
 
-    &--loader {
+    &--submit {
+        height: auto;
+        padding: 1rem;
+    }
 
+    &--close {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        background-image: url('./assets/close.png');
+        background-size: 4rem;
+        background-repeat: no-repeat;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -330,4 +346,70 @@
         opacity: 1;
         transform: translateY(0rem);
     }
+}
+
+.action-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 3px solid black;
+    border-radius: 2px;
+    width: 30%;
+
+    &__item {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 4rem;
+        font-weight: bold;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        background-color: #E0D6DA;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.action-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-window {
+    position: relative;
+    width: 40%;
+    border-radius: .5rem;
+    background-color: white;
+
+    &--small {
+        width: 25%;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 3rem;
+    }
+}
+
+.action-window input{
+    background-color: white;
+    line-height: 2.4rem;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-bottom: 1.5rem;
+}
+
+.action-window textarea {
+    margin-bottom: 1.5rem;
+    border: 1px solid black;
+    outline: none;
+	-moz-appearance: none;
+    border: 1px solid #999;
+    resize: none;
 }

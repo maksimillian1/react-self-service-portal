@@ -23,7 +23,7 @@ export default function HomePage() {
                     <div className="menu-box">
                         <ul className="menu-box__list">
                             <li className="menu-box__item">
-                                <Link className="menu-box__link" to="">
+                                <Link className="menu-box__link" to="/incidents">
                                     <img src={incident} className="menu-box__icon"/>
                                     <div>My Incidents</div>
                                 </Link>
@@ -35,7 +35,7 @@ export default function HomePage() {
                                 </Link>
                             </li>
                             <li className="menu-box__item">
-                                <Link className="menu-box__link" to="">
+                                <Link className="menu-box__link" to="/requests">
                                     <img src={request} className="menu-box__icon"/>
                                     <div>My Request</div>
                                 </Link>

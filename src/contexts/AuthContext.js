@@ -1,6 +1,3 @@
-import { CreateContext } from 'react';
+import {createContext}  from 'react';
 
-export default CreateContext({
-    userData: {},
-    userAvatar: ''
-});
+export const AuthContext = createContext(null);

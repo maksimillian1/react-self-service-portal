@@ -1,27 +1,28 @@
-import React from "react";
+import React, {useContext} from "react";
 import {Link} from "react-router-dom";
 import { hot } from "react-hot-loader/root";
 import iconBookmark from '../assets/SVG/bookmark.svg';
 import iconChat from '../assets/SVG/chat.svg';
 import logoMagnGlass from "../assets/SVG/magnifying-glass.svg";
+import {AuthContext} from '../contexts/AuthContext';
 
-function Navigation({user}) {
+function Navigation() {
+    const auth = useContext(AuthContext);
     
-
     return (
         <header className="header">
-            <Link className="user-nav user-nav__user-link" to="/x_elsr_react_app_index-html.do">
+            <Link className="user-nav user-nav__user-link" to="/">
                 <h2>Home</h2>
             </Link>
 
             <form action="#" className="search">
                 <input type="text" className="search__input" placeholder="Search" />
                 <button className="search__button">
-                    <img src={logoMagnGlass} alt="trillo logo" className="search__icon"/>
+                    <img src={logoMagnGlass} className="search__icon"/>
                 </button>
             </form>
             <nav className="user-nav">
-                <Link className="navigation__link" to="/x_elsr_react_app_index-html.do/request">
+                <Link className="navigation__link" to="/request">
                     <div className="user-nav__icon-box">
                         <img src={iconBookmark} alt="trillo logo" className="user-nav__icon"/>
                         <span className="user-nav__notification">7</span>
@@ -29,7 +30,7 @@ function Navigation({user}) {
                     </div>
                 </Link>
 
-                <Link to="/x_elsr_react_app_index-html.do/incidents">
+                <Link to="/incidents">
                     <div className="user-nav__icon-box">
                             <img src={iconChat} alt="trillo logo" className="user-nav__icon"/>
                             <span className="user-nav__notification">13</span>
@@ -37,9 +38,9 @@ function Navigation({user}) {
                 </Link>
 
                 <div className="user-nav__user">
-                    <Link className="user-nav__user-link" to="/x_elsr_react_app_index-html.do/user">
+                    <Link className="user-nav__user-link" to="/user">
                         <img src={'https://dev99142.service-now.com/0214ADAF-1C76-4E34-966F-0EBD09534402.png'} alt="User photo" className="user-nav__user-photo"/>
-                        <span className="user-nav__user-name">{user.first_name}</span>
+                        <span className="user-nav__user-name">{auth.first_name}</span>
                     </Link>
                 </div>
             </nav>
