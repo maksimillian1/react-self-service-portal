@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Incident from "./Incident";
+import Incident from "../cards/Incident";
 
 export default function IncidentList({list}) {
 

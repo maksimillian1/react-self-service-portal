@@ -31,11 +31,32 @@
 }
 
 .content {
+
+    &--pink {
+        background-image: linear-gradient(to right bottom, $color-primary-pink-light, $color-primary-pink-dark);
+    }
+
+    &--violet {
+        background-image: linear-gradient(to right bottom, $color-primary-violet-light, $color-primary-violet-dark);
+    }
+
+    &--blue {
+        background-image: linear-gradient(to right bottom, $color-primary-blue-light, $color-primary-blue-dark);
+    }
+
+    &--green {
+        background-image: linear-gradient(to right bottom, $color-primary-green-light, $color-primary-green-dark);
+    }
+
+    background-size: cover;
+    background-repeat: no-repeat;
     display: block;
+    flex: 1 0 auto;
     padding: 7rem 4rem;
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
     }
+
 }
 
 .row {
@@ -48,6 +69,10 @@
     &--flex {
         display: flex;
         flex-direction: row;
+    }
+
+    &--rel {
+        position: relative;
     }
 }
 
@@ -109,23 +134,27 @@
 }
 
 .footer {
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: $color-black;
     height: 11rem;
     padding: 2rem 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-shrink: 0;
 
     &__navigation {
+        display: flex;
         align-self: center;
         justify-items: center;
         width: 100%;
-        display: flex;
     }
 
     &__list {
         display: flex;
+        align-self: center;
+
         width: 100%;
         padding-left: 0;
     }
@@ -141,8 +170,29 @@
     }
 
     &__link {
-        background: linear-gradient(to right bottom, #FF3366, #BA265D);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+
+        &--pink {
+            background: linear-gradient(to right bottom, $color-primary-pink-light, $color-primary-pink-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        &--violet {
+            background: linear-gradient(to right bottom, $color-primary-violet-light, $color-primary-violet-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        &--blue {
+            background: linear-gradient(to right bottom, $color-primary-blue-light, $color-primary-blue-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        &--green {
+            background: linear-gradient(to right bottom, $color-primary-green-light, $color-primary-green-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }

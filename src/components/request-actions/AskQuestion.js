@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {ModalContext} from '../../contexts/ModalContext';
 
 
-export default function AskQuestion({setPostResponse, request}) {
+export default function AskQuestion({setPostResponse, request, className}) {
     const action = useContext(ModalContext);
     const [subject, setSubject] = useState('');
     const [body, setBody] = useState('');
@@ -12,13 +12,17 @@ export default function AskQuestion({setPostResponse, request}) {
         setPostResponse(res);
     }
 
+    console.log(className);
+    
+
     return (
-        <form method="POST" onSubmit={onSubmit} className="action-window__form">
-            <label htmlFor="title">Subject</label>
-            <input id="title" type="text" onChange={(e)=> setSubject(e.target.value)}/>
-            <label htmlFor="body">Your question</label>
-            <textarea  id="body" cols="30" rows="3" onChange={(e)=> setBody(e.target.value)} ></textarea>
-            <button className="btn btn--submit">Submit</button>
+        <form method="POST" onSubmit={onSubmit} className="action-form">
+            <input required className="action-form__input" id="title" type="text" onChange={(e)=> setSubject(e.target.value)} placeholder="Subject"/>
+            <label className="action-form__label" htmlFor="title">Subject</label>
+            <textarea required className="action-form__input" id="body" cols="30" rows="3" onChange={(e)=> setBody(e.target.value)} placeholder="Your question"></textarea>
+            <label className="action-form__label" htmlFor="body">Your question</label>
+            <button className={`btn btn--submit ${className}`}>Submit</button>
+
         </form>            
     );
 }

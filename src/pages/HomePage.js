@@ -29,7 +29,7 @@ export default function HomePage() {
                                 </Link>
                             </li>
                             <li className="menu-box__item">
-                                <Link className="menu-box__link" to="">
+                                <Link className="menu-box__link" to="/tasks">
                                     <img src={task} className="menu-box__icon"/>
                                     <div>My Tasks</div>
                                 </Link>
@@ -37,7 +37,7 @@ export default function HomePage() {
                             <li className="menu-box__item">
                                 <Link className="menu-box__link" to="/requests">
                                     <img src={request} className="menu-box__icon"/>
-                                    <div>My Request</div>
+                                    <div>My Requested Items</div>
                                 </Link>
                             </li>
                         </ul>
@@ -47,19 +47,19 @@ export default function HomePage() {
                     <div className="menu-box">
                         <ul className="menu-box__list">
                             <li className="menu-box__item">
-                                <Link className="menu-box__link" to="">
+                                <Link className="menu-box__link" to="/assets">
                                     <img src={acquisition} className="menu-box__icon"/>
                                     <div>My Assets</div>
                                 </Link>
                             </li>
                             <li className="menu-box__item">
-                                <Link className="menu-box__link" to="">
+                                <Link className="menu-box__link" to="/approvals">
                                     <img src={approval} className="menu-box__icon"/>
                                     <div>My Approvals</div>
                                 </Link>
                             </li>
                             <li className="menu-box__item">
-                                <Link className="menu-box__link" to="">
+                                <Link className="menu-box__link" to="/knowledge">
                                     <img src={article} className="menu-box__icon"/>
                                     <div>My Knoledge Articles</div>
                                 </Link>

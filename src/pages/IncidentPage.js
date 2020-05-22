@@ -1,13 +1,13 @@
-import useAxios from '../hooks/useAxios';
 import React from 'react';
 
+import {useOnLoadFetch} from '../hooks/useOnLoadFetch';
 import Preloader from '../components/Preloader';
 
-export default function IncidentPage(props) {
+export function IncidentPage(props) {
     
     const id = props.match.params.id;
     
-    const { loading, errors, result } = useAxios(`/api/x_395143_employee/em_incident_api/incident/${id}`, 'object');
+    const {result, loading, errors} = useOnLoadFetch(`/api/x_395143_employee/em_incident_api/incident/${id}`);
     
 
     if(loading || errors){

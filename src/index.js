@@ -24,6 +24,12 @@ if (process.env.NODE_ENV === 'development') {
   }
   axios.defaults.headers.put['Content-Type'] = 'application/json';
 
+  //set loader
+  const spinner = document.getElementById('spinner');
+  if (spinner && !spinner.hasAttribute('hidden')) {
+    spinner.setAttribute('hidden', 'true');
+  }
+
 ReactDOM.render(
   <HashRouter>
     <App />

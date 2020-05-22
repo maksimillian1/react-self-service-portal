@@ -1,6 +1,19 @@
-$color-primary: #eb2f64;
-$color-primary-light: #FF3366;
-$color-primary-dark: #BA265D;
+$color-primary-pink: #eb2f64;
+$color-primary-pink-light: #FF3366;
+$color-primary-pink-dark: #BA265D;
+
+$color-primary-violet: #71578a;
+$color-primary-violet-light: #8e6cad;
+$color-primary-violet-dark: #513769;
+
+$color-primary-green: #4db368;
+$color-primary-green-light: #358f4d;
+$color-primary-green-dark: #5bb573;
+
+$color-primary-blue: #375878;
+$color-primary-blue-light: #4d7091;
+$color-primary-blue-dark: #244463;
+
 
 $color-grey-light-1: #faf9f9;
 $color-grey-light-2: #f4f2f2;
@@ -25,6 +38,51 @@ $bp-large: 68.75em;    // 1100px
 $bp-medium: 56.25em;   // 900px
 $bp-small: 37.5em;     // 600px
 $bp-smallest: 31.25em; // 500px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: 68.75em) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #777;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+}
 
 .u-display-none {
     display: none;
